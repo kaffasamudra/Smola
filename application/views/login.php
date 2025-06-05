@@ -35,14 +35,17 @@
 								</div>
 							</div>
 							<div class="card-body">
-								<form role="form" class="text-start" method="post" action="<?= base_url('users/login') ?>">
+								<?php if($this->session->flashdata('error')): ?>
+									<p style="color:red"><?= $this->session->flashdata('error') ?></p>
+								<?php endif; ?>
+								<form role="form" class="text-start" method="post" action="<?= base_url('loginn') ?>">
 									<div class="input-group input-group-outline my-3">
 										<label class="form-label">Email</label>
-										<input type="text" class="form-control">
+										<input type="text" name="email" class="form-control">
 									</div>
 									<div class="input-group input-group-outline mb-3">
 										<label class="form-label">Password</label>
-										<input type="password" class="form-control">
+										<input type="password" name="password" class="form-control">
 									</div>
 									<div class="text-center">
 										<button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign in</button>

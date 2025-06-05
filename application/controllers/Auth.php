@@ -7,48 +7,78 @@ class Auth extends CI_Controller {
         $this->load->helper('url');
     }
 
-    public function index() {
+    public function login() {
         $this->load->view('login');
     }
 
-    public function login() {
-        $username = $this->input->post('username');
+    public function loginn() {
+        $email = $this->input->post('email');
         $password = $this->input->post('password');
 
-        $user = $this->M_users->get_user($username);
+        $user = $this->M_users->get_user($email);
 
         if ($user && password_verify($password, $user->password)) {
             $this->session->set_userdata([
                 'user_id' => $user->id,
                 'role'    => $user->role,
-                'username'=> $user->username
+                'email'=> $user->email
             ]);
 
-            if ($users->role == 'admin') {
+            if ($user->role == 'admin') {
                 redirect('dashboard/admin');
-            } elseif ($users->role == 'pegawai') {
+            } elseif ($user->role == 'pegawai') {
                 redirect('dashboard/pegawai');
-            } elseif ($users->role == 'ortu') {
+            } elseif ($user->role == 'ortu') {
                 redirect('dashboard/ortu');
             }
         } else {
             $this->session->set_flashdata('error', 'Login gagal!');
-            redirect('auth');
+            redirect('login');
         }
     }
 
-    public function create() {
-        $this->load->view('item/form');
+    public function register() {
+        $this->load->view('ortu/register');
     }
 
-    public function new() {
+    public function registerr() {
+        $this->load->model('M_users');
+
+        $username = $this->input->post('username');
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+        $password2 = $this->input->post('password2');
+
+        if ($this->M_users->get_user($username)) {
+            $this->session->set_flashdata('error', 'Username sudah digunakan!');
+            redirect('auth/register');
+            return;
+        }
+
+        if (strlen($password) < 6) {
+            $this->session->set_flashdata('error', 'Password minimal 6 karakter!');
+            redirect('auth/register');
+            return;
+        }
+
+        if ($password !== $password2) {
+            $this->session->set_flashdata('error', 'Konfirmasi password tidak cocok!');
+            redirect('auth/register');
+            return;
+        }
+
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+
         $data = [
-            'name' => $this->input->post('name'),
-            'description' => $this->input->post('description'),
-            'price' => $this->input->post('price'),
+            'username' => $username,
+            'email' => $email,
+            'password' => $hash,
+            'role'     => 'ortu'
         ];
-        $this->M_users->insert($data);
-        redirect('item');
+
+        $this->db->insert('users', $data);
+        $this->session->set_flashdata('success', 'Berhasil daftar! Silakan login.');
+        redirect('login');
     }
 
     public function edit($id) {
