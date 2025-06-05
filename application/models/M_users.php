@@ -5,6 +5,10 @@ class M_users extends CI_Model {
         return $this->db->get('users')->result();
     }
 
+    public function get_user($username) {
+        return $this->db->get_where('users', ['username' => $username])->row();
+    }
+
     public function get_by_id($id) {
         return $this->db->get_where('users', ['id' => $id])->row();
     }
