@@ -8,7 +8,10 @@
 	<link rel="icon" type="image/png" href="../assets/img/favicon.png">
 	<title>Login</title>
 	<!--     Fonts and icons     -->
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
 	<!-- Nucleo Icons -->
 	<link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
 	<link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -22,7 +25,7 @@
 </head>
 
 <body class="bg-gray-200">
-	<main class="main-content  mt-0">
+	<main class="main-content mt-0">
 		<div class="page-header align-items-start min-vh-100" style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');">
 			<span class="mask bg-gradient-dark opacity-6"></span>
 			<div class="container my-auto">
@@ -35,7 +38,7 @@
 								</div>
 							</div>
 							<div class="card-body">
-								<?php if($this->session->flashdata('error')): ?>
+								<?php if ($this->session->flashdata('error')): ?>
 									<p style="color:red"><?= $this->session->flashdata('error') ?></p>
 								<?php endif; ?>
 								<form role="form" class="text-start" method="post" action="<?= base_url('loginn') ?>">
