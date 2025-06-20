@@ -7,7 +7,6 @@ class Dashboard extends CI_Controller
     }
 
 	public function index() {
-		$this->load->view("layout/sidebar");
 		$this->load->view("ortu/dashboard");
 	}
 }
