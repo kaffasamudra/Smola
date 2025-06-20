@@ -9,5 +9,5 @@ $route['login'] = 'auth/login';
 $route['loginn'] = 'auth/loginn';
 $route['regis'] = 'auth/register';
 
-$route['admin_dashboard'] = 'admin/dashboard/index';
-$route['ortu_dashboard'] = 'ortu/dashboard/index';
+$route['admin-dashboard'] = 'admin/dashboard/index';
+$route['ortu-dashboard'] = 'ortu/dashboard/index';
