@@ -19,7 +19,8 @@
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- CSS Files -->
-    <link id="pagestyle" href="../../assets/css/material-dashboard.css?v=3.2.0" rel="stylesheet" />
+    <link rel="stylesheet" href="<?= base_url("assets/admin/") ?>css/material-dashboard.css">
+    <!-- <link id="pagestyle" href="../../assets/css/material-dashboard.css?v=3.2.0" rel="stylesheet" /> -->
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -817,7 +818,8 @@
     </div>
     <!--   Core JS Files   -->
     <script src="../../assets/js/core/popper.min.js"></script>
-    <script src="../../assets/js/core/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url("assets/admin/") ?>js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../../assets/js/core/bootstrap.bundle.min.js"></script> -->
     <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
     <script src="../../assets/js/plugins/chartjs.min.js"></script>

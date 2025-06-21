@@ -25,7 +25,7 @@ class Auth extends CI_Controller {
             ]);
 
             if ($user->role == 'admin') {
-                redirect('dashboard/admin');
+                redirect('admin_dashboard');
             } elseif ($user->role == 'pegawai') {
                 redirect('dashboard/pegawai');
             } elseif ($user->role == 'ortu') {
