@@ -27,48 +27,48 @@
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-radius-lg fixed-start ms-2  bg-white my-2" id="sidenav-main">
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand px-4 py-3 m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
+            <a class="navbar-brand px-4 py-3 m-0" href="<?= site_url('admin-dashboard') ?>">
                 <img src="../../assets/img/logo-ct-dark.png" class="navbar-brand-img" width="26" height="26" alt="main_logo">
-                <span class="ms-1 text-sm text-dark">Creative Tim</span>
+                <span class="ms-1 text-sm text-dark">Athahira</span>
             </a>
         </div>
         <hr class="horizontal dark mt-0 mb-2">
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active bg-gradient-dark text-white" href="../pages/dashboard.html">
+                    <a class="nav-link active bg-gradient-dark text-white" href="<?= site_url('admin-dashboard') ?>">
                         <i class="material-symbols-rounded opacity-5">dashboard</i>
                         <span class="nav-link-text ms-1">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-dark" href="../pages/virtual-reality.html">
+                        <i class="material-symbols-rounded opacity-5">admin_panel_settings</i>
+                        <span class="nav-link-text ms-1">Manajemen Pengguna</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-dark" href="../pages/tables.html">
-                        <i class="material-symbols-rounded opacity-5">table_view</i>
-                        <span class="nav-link-text ms-1">Tables</span>
+                        <i class="material-symbols-rounded opacity-5">article_person</i>
+                        <span class="nav-link-text ms-1">Kepegawaian</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="../pages/billing.html">
-                        <i class="material-symbols-rounded opacity-5">receipt_long</i>
-                        <span class="nav-link-text ms-1">Billing</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="../pages/virtual-reality.html">
-                        <i class="material-symbols-rounded opacity-5">view_in_ar</i>
-                        <span class="nav-link-text ms-1">Virtual Reality</span>
+                        <i class="material-symbols-rounded opacity-5">backpack</i>
+                        <span class="nav-link-text ms-1">Kesiswaan</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="../pages/rtl.html">
-                        <i class="material-symbols-rounded opacity-5">format_textdirection_r_to_l</i>
-                        <span class="nav-link-text ms-1">RTL</span>
+                        <i class="material-symbols-rounded opacity-5">monitoring</i>
+                        <span class="nav-link-text ms-1">Laporan</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="../pages/notifications.html">
-                        <i class="material-symbols-rounded opacity-5">notifications</i>
-                        <span class="nav-link-text ms-1">Notifications</span>
+                        <i class="material-symbols-rounded opacity-5">archive</i>
+                        <span class="nav-link-text ms-1">Arsip</span>
                     </a>
                 </li>
                 <li class="nav-item mt-3">
@@ -94,12 +94,6 @@
                 </li>
             </ul>
         </div>
-        <div class="sidenav-footer position-absolute w-100 bottom-0 ">
-            <div class="mx-3">
-                <a class="btn btn-outline-dark mt-4 w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard?ref=sidebarfree" type="button">Documentation</a>
-                <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
-            </div>
-        </div>
     </aside>
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <!-- Navbar -->
@@ -119,12 +113,6 @@
                         </div>
                     </div>
                     <ul class="navbar-nav d-flex align-items-center  justify-content-end">
-                        <li class="nav-item d-flex align-items-center">
-                            <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="https://www.creative-tim.com/builder?ref=navbar-material-dashboard">Online Builder</a>
-                        </li>
-                        <li class="mt-1">
-                            <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/material-dashboard on GitHub">Star</a>
-                        </li>
                         <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
                                 <div class="sidenav-toggler-inner">
