@@ -20,7 +20,8 @@
 	<!-- Material Icons -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 	<!-- CSS Files -->
-	<link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.2.0" rel="stylesheet" />
+    <link rel="stylesheet" href="<?= base_url("assets/admin/") ?>css/material-dashboard.css">
+	<!-- <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.2.0" rel="stylesheet" /> -->
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
 </head>
 
@@ -55,7 +56,7 @@
 									</div>
 									<p class="mt-4 text-sm text-center">
 										Don't have an account?
-										<a href="../pages/sign-up.html" class="text-primary text-gradient font-weight-bold">Sign up</a>
+										<a href="<?= base_url('regis') ?>" class="text-primary text-gradient font-weight-bold">Sign up</a>
 									</p>
 								</form>
 							</div>
