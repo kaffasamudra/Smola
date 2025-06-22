@@ -1,711 +1,583 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <meta charset="utf-8">
+    <title>eLEARNING - eLearning HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-    <!-- Fonts -->
+    <!-- Favicon -->
+    <link href="../../assets/users/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="../../assets/lp-ortu/images/favicon.png" type="image/png">
-        
-    <!--====== Animate CSS ======-->
-    <link rel="stylesheet" href="../../assets/lp-ortu/css/animate.css">
-        
-    <!--====== Glide CSS ======-->
-    <link rel="stylesheet" href="../../assets/lp-ortu/css/tiny-slider.css">
-        
-    <!--====== Line Icons CSS ======-->
-    <link rel="stylesheet" href="../../assets/lp-ortu/css/LineIcons.2.0.css">
-        
-    <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" href="../../assets/lp-ortu/css/bootstrap-5.0.0-beta1.min.css">
-    
-    <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="../../assets/lp-ortu/css/default.css">
-    
-    <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="../../assets/lp-ortu/css/style.css">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/users/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../../assets/users/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!--====== PRELOADER PART START ======-->
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
 
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="../../assets/users/img/carousel-1.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                                <h1 class="display-3 text-white animated slideInDown">The Best Online Learning Platform</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
+                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                            </div>
                         </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="../../assets/users/img/carousel-2.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
+                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Carousel End -->
 
-    <!--====== PRELOADER PART ENDS ======-->
 
-    <!--====== HEADER PART START ======-->
-
-    <section id="home" class="header_area">
-        <div id="header_navbar" class="header_navbar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img id="logo" src="../../assets/lp-ortu/images/logo.svg" alt="Logo">
-                            </a>
-                            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul id="nav" class="navbar-nav ms-auto">
-                                    <li class="nav-item">
-                                        <a class="page-scroll active" href="#home">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#about">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#services">Services</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#portfolio">Gallery</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#team">Team</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#blog">Blog</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">Contact</a>
-                                    </li>
-                                </ul>
-                            </div> <!-- navbar collapse -->
-                        </nav> <!-- navbar -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- header navbar -->
-
-        <div class="header_hero">
-            <div class="single_hero bg_cover d-flex align-items-center" style="background-image: url(../../assets/lp-ortu/images/hero.jpg)">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8 col-md-10">
-                            <div class="hero_content text-center">
-                                <h2 class="hero_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Simple Bootstrap 5</br> Website Template</h2>
-                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">A super simple website template based on Bootstrap 5 and HTML5, comes with all essential <br class="d-none d-xl-block"> elements & features to get started and ready to use for almost any type of business websites.</p>
-                                <a href="#features" class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">Explore</a>
-                            </div> <!-- hero content -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single hero -->
-        </div> <!-- header hero -->
-    </section>
-
-    <!--====== HEADER PART ENDS ======-->
-
-    <!--====== FEATURES PART START ======-->
-
-    <section id="features" class="features_area pt-120">
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-25">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Why Choose Us</h4>
-                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor sit
-                            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.</p>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-7">
-                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <i class="lni lni-layers"></i>
-                        <h4 class="features_title">Bootstrap 5 Based</a></h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-7">
-                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.4s">
-                        <i class="lni lni-layout"></i>
-                        <h4 class="features_title">Clean Design</a></h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-7">
-                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.6s">
-                        <i class="lni lni-bolt"></i>
-                        <h4 class="features_title">Cutting-edge Features</a></h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== FEATURES PART ENDS ======-->
-
-    <!--====== ABOUT PART START ======-->
-
-    <section id="about" class="pt-130">
-        <div class="about_area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about_content pt-120 pb-130">
-                            <div class="section_title pb">
-                                <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">About Our
-                                    Creative Proccess</h4>
-                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor
-                                    sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut
-                                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                                    dolores et erebum</p>
-                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.6s">Lorem ipsum dolor
-                                    sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                                    ut labore etdolore maali quyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                                    dolores</p>
-                            </div> <!-- section title -->
-                            <a href="#0" class="main-btn wow fadeInUp" data-wow-duration="1.3s"
-                                data-wow-delay="0.7s">Learn More</a>
-                        </div> <!-- about content -->
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <h5 class="mb-3">Skilled Instructors</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
                     </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-
-            <div class="about_image bg_cover wow fadeInLeft" data-wow-duration="1.3s" data-wow-delay="0.2s"
-                style="background-image: url(../../assets/lp-ortu/images/about.jpg)">
-                <div class="image_content">
-                    <h4 class="experience"><span>5</span> Years of Experience</h4>
                 </div>
-            </div> <!-- about image -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <h5 class="mb-3">Online Classes</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                            <h5 class="mb-3">Home Projects</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <h5 class="mb-3">Book Library</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+    <!-- Service End -->
 
-    <!--====== ABOUT PART ENDS ======-->
 
-    <!--====== FEATURES PART START ======-->
-
-    <section id="services" class="features_area pt-120">
+    <!-- About Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-25">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Our Services</h4>
-                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor sit
-                            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.</p>
-                    </div> <!-- section title -->
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="../../assets/users/img/about.jpg" alt="" style="object-fit: cover;">
+                    </div>
                 </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <i class="lni lni-briefcase"></i>
-                        <h4 class="features_title">Digital Business</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.3s">
-                        <i class="lni lni-clipboard"></i>
-                        <h4 class="features_title">Startup Business</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.4s">
-                        <i class="lni lni-target-revenue"></i>
-                        <h4 class="features_title">Business Investment</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <i class="lni lni-invention"></i>
-                        <h4 class="features_title">Business Solutions</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.3s">
-                        <i class="lni lni-bar-chart"></i>
-                        <h4 class="features_title">Business Analysis</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.4s">
-                        <i class="lni lni-calendar"></i>
-                        <h4 class="features_title">Consulting Business</h4>
-                        <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .</p>
-                    </div> <!-- single features -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== FEATURES PART ENDS ======-->
-
-    <!--====== PORTFOLIO PART START ======-->
-
-    <section id="portfolio" class="portfolio_area pt-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-60">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Our Portfolio</h4>
-                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor sit
-                            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.</p>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        <div class="portfolio_wrapper d-flex flex-wrap">
-            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                <img src="../../assets/lp-ortu/images/portfolio-1.jpg" alt="portfolio">
-                <div class="portfolio_content">
-                    <ul class="meta">
-                        <li><a href="#0"><i class="lni lni-link"></i></a></li>
-                    </ul>
-                    <h5 class="portfolio_title">Logo And Branding</h5>
-                </div> <!-- Single portfolio -->
-            </div> <!-- portfolio wrapper -->
-            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.3s">
-                <img src="../../assets/lp-ortu/images/portfolio-2.jpg" alt="portfolio">
-                <div class="portfolio_content">
-                    <ul class="meta">
-                        <li><a href="#0"><i class="lni lni-link"></i></a></li>
-                    </ul>
-                    <h5 class="portfolio_title">Bootstrap 5 Project</h5>
-                </div> <!-- Single portfolio -->
-            </div> <!-- portfolio wrapper -->
-            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                <img src="../../assets/lp-ortu/images/portfolio-3.jpg" alt="portfolio">
-                <div class="portfolio_content">
-                    <ul class="meta">
-                        <li><a href="#0"><i class="lni lni-link"></i></a></li>
-                    </ul>
-                    <h5 class="portfolio_title">Creative Projects</h5>
-                </div> <!-- Single portfolio -->
-            </div> <!-- portfolio wrapper -->
-            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                <img src="../../assets/lp-ortu/images/portfolio-4.jpg" alt="portfolio">
-                <div class="portfolio_content">
-                    <ul class="meta">
-                        <li><a href="#0"><i class="lni lni-link"></i></a></li>
-                    </ul>
-                    <h5 class="portfolio_title">UI/UX Projects</h5>
-                </div> <!-- Single portfolio -->
-            </div> <!-- portfolio wrapper -->
-            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                <img src="../../assets/lp-ortu/images/portfolio-5.jpg" alt="portfolio">
-                <div class="portfolio_content">
-                    <ul class="meta">
-                        <li><a href="#0"><i class="lni lni-link"></i></a></li>
-                    </ul>
-                    <h5 class="portfolio_title">App Development</h5>
-                </div> <!-- Single portfolio -->
-            </div> <!-- portfolio wrapper -->
-            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.3s">
-                <img src="../../assets/lp-ortu/images/portfolio-6.jpg" alt="portfolio">
-                <div class="portfolio_content">
-                    <ul class="meta">
-                        <li><a href="#0"><i class="lni lni-link"></i></a></li>
-                    </ul>
-                    <h5 class="portfolio_title">Web Development</h5>
-                </div> <!-- Single portfolio -->
-            </div> <!-- portfolio wrapper -->
-            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                <img src="../../assets/lp-ortu/images/portfolio-7.jpg" alt="portfolio">
-                <div class="portfolio_content">
-                    <ul class="meta">
-                        <li><a href="#0"><i class="lni lni-link"></i></a></li>
-                    </ul>
-                    <h5 class="portfolio_title">Business Card Design</h5>
-                </div> <!-- Single portfolio -->
-            </div> <!-- portfolio wrapper -->
-            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                <img src="../../assets/lp-ortu/images/portfolio-8.jpg" alt="portfolio">
-                <div class="portfolio_content">
-                    <ul class="meta">
-                        <li><a href="#0"><i class="lni lni-link"></i></a></li>
-                    </ul>
-                    <h5 class="portfolio_title">Consulting Business</h5>
-                </div> <!-- Single portfolio -->
-            </div> <!-- portfolio wrapper -->
-        </div> <!-- row -->
-    </section>
-
-    <!--====== PORTFOLIO PART ENDS ======-->
-
-    <!--====== PRICING PART START ======-->
-
-    <section id="pricing" class="pricing_area pt-120 pb-130">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-25">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Pricing Plans</h4>
-                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor sit
-                            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.</p>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-8 col-sm-10">
-                    <div class="single_pricing text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <h4 class="pricing_title">Startup</h4>
-                        <span class="price">$240</span>
-                        <ul class="pricing_list">
-                            <li>Startup Business</li>
-                            <li>Business Consulting</li>
-                            <li>Business Analysis</li>
-                            <li>Corporate Business</li>
-                            <li>Business Investment</li>
-                        </ul>
-                        <a href="#0" class="mian-btn">Order Now</a>
-                    </div> <!-- single pricing -->
-                </div>
-                <div class="col-lg-4 col-md-8 col-sm-10">
-                    <div class="single_pricing text-center mt-30 active wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.3s">
-                        <h4 class="pricing_title">Agency</h4>
-                        <span class="price">$340</span>
-                        <ul class="pricing_list">
-                            <li>Startup Business</li>
-                            <li>Business Consulting</li>
-                            <li>Business Analysis</li>
-                            <li>Corporate Business</li>
-                            <li>Business Investment</li>
-                        </ul>
-                        <a href="#0" class="mian-btn">Order Now</a>
-                    </div> <!-- single pricing -->
-                </div>
-                <div class="col-lg-4 col-md-8 col-sm-10">
-                    <div class="single_pricing text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.4s">
-                        <h4 class="pricing_title">Enterprise</h4>
-                        <span class="price">$440</span>
-                        <ul class="pricing_list">
-                            <li>Startup Business</li>
-                            <li>Business Consulting</li>
-                            <li>Business Analysis</li>
-                            <li>Corporate Business</li>
-                            <li>Business Investment</li>
-                        </ul>
-                        <a href="#0" class="mian-btn">Order Now</a>
-                    </div> <!-- single pricing -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== PRICING PART ENDS ======-->
-
-    <!--====== TEAM PART START ======-->
-
-    <section id="team" class="team_area pt-120 pb-130">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-25">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Meet The Team</h4>
-                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor sit
-                            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.</p>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center team_active">
-                <div class="col-lg-4 col-md-8 col-sm-10">
-                    <div class="single_team mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                        <img src="../../assets/lp-ortu/images/team-1.jpg" alt="team">
-
-                        <div class="team_content">
-                            <h4 class="team_name"><a href="#0">Tom Hanks.</a></h4>
-                            <p>Head Of Ideas</p>
-                            <ul class="social">
-                                <li><a href="#0"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="#0"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="#0"><i class="lni lni-linkedin-original"></i></a></li>
-                            </ul>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h1 class="mb-4">Welcome to eLEARNING</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
                         </div>
-                    </div> <!-- single team -->
-                </div>
-                <div class="col-lg-4 col-md-8 col-sm-10">
-                    <div class="single_team mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.3s">
-                        <img src="../../assets/lp-ortu/images/team-2.jpg" alt="team">
-
-                        <div class="team_content">
-                            <h4 class="team_name"><a href="#0">Jennifer L.</a></h4>
-                            <p>UX Designer</p>
-                            <ul class="social">
-                                <li><a href="#0"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="#0"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="#0"><i class="lni lni-linkedin-original"></i></a></li>
-                            </ul>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
                         </div>
-                    </div> <!-- single team -->
-                </div>
-                <div class="col-lg-4 col-md-8 col-sm-10">
-                    <div class="single_team mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                        <img src="../../assets/lp-ortu/images/team-3.jpg" alt="team">
-
-                        <div class="team_content">
-                            <h4 class="team_name"><a href="#0">Rob Percy</a></h4>
-                            <p>Creative Designer</p>
-                            <ul class="social">
-                                <li><a href="#0"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="#0"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="#0"><i class="lni lni-linkedin-original"></i></a></li>
-                            </ul>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
                         </div>
-                    </div> <!-- single team -->
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
 
-    <!--====== TEAM PART ENDS ======-->
 
-    <!--====== TESTIMONIAL PART START ======-->
-
-    <section id="testimonial" class="testimonial_area pt-130 pb-130 bg_cover" style="background-image: url(../../assets/lp-ortu/images/testimonial.jpg)">
+    <!-- Categories Start -->
+    <div class="container-xxl py-5 category">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="testimonial_active_wrapper">
-                        <div class="testimonial_active">
-                            <div class="single_testimonial text-center">
-                                <img src="../../assets/lp-ortu/images/author-1.jpg" alt="author">
-                                <h5 class="author_name">Isabela Moreira</h5>
-                                <span>UX Specialist, Yoast</span>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                                    vero eos accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
-                                </p>
-                            </div>
-                            <div class="single_testimonial text-center">
-                                <img src="../../assets/lp-ortu/images/author-2.jpg" alt="author">
-                                <h5 class="author_name">Fiona Smith</h5>
-                                <span>Sr. Software Engineer</span>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                                    vero eos accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
-                                </p>
-                            </div>
-                            <div class="single_testimonial text-center">
-                                <img src="../../assets/lp-ortu/images/author-3.jpg" alt="author">
-                                <h5 class="author_name">Elon Musk</h5>
-                                <span>Creaitve Businessman</span>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                                    vero eos accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
-                                </p>
-                            </div>
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
+                <h1 class="mb-5">Courses Categories</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="../../assets/users/img/cat-1.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Web Design</h5>
+                                    <small class="text-primary">49 Courses</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="../../assets/users/img/cat-2.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Graphic Design</h5>
+                                    <small class="text-primary">49 Courses</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="../../assets/users/img/cat-3.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Video Editing</h5>
+                                    <small class="text-primary">49 Courses</small>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                        <img class="img-fluid position-absolute w-100 h-100" src="../../assets/users/img/cat-4.jpg" alt="" style="object-fit: cover;">
+                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+                            <h5 class="m-0">Online Marketing</h5>
+                            <small class="text-primary">49 Courses</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Categories Start -->
 
-    <!--====== TESTIMONIAL PART ENDS ======-->
 
-    <!--====== BLOG PART START ======-->
-
-    <section id="blog" class="blog_area pt-120 pb-130">
+    <!-- Courses Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-25">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Recent Blog</h4>
-                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor sit
-                            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.</p>
-                    </div> <!-- section title -->
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
+                <h1 class="mb-5">Popular Courses</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="../../assets/users/img/course-1.jpg" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
                 </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="single_blog mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                        <div class="blog_image">
-                            <img src="../../assets/lp-ortu/images/blog-1.jpg" alt="blog">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="../../assets/users/img/course-2.jpg" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
                         </div>
-                        <div class="blog_content">
-                            <h3 class="blog_title"><a href="#0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor .</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.Lorem ipsum dolor sit amet, conse sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .Lorem ipsum dolor sit amet, consetetur sadipscing elit.</p>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
                         </div>
-                    </div> <!-- single blog -->
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="single_blog blog_2 d-sm-flex mt-30 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <div class="blog_image">
-                            <img src="../../assets/lp-ortu/images/blog-2.jpg" alt="blog">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="../../assets/users/img/course-3.jpg" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
                         </div>
-                        <div class="blog_content media-body">
-                            <h3 class="blog_title"><a href="#0">Lorem ipsum dolor sit amet, consetetur sadipscing .</a></h3>
-                            <p>Lorem ipsum dolor sit consetetur sadipscing elitr, sed diam.</p>
-                            <a href="#0" class="more">Read More</a>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
                         </div>
-                    </div> <!-- single blog -->
-
-                    <div class="single_blog blog_2 d-sm-flex mt-30 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.3s">
-                        <div class="blog_image">
-                            <img src="../../assets/lp-ortu/images/blog-3.jpg" alt="blog">
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
                         </div>
-                        <div class="blog_content media-body">
-                            <h3 class="blog_title"><a href="#0">Lorem ipsum dolor sit amet, consetetur sadipscing .</a></h3>
-                            <p>Lorem ipsum dolor sit consetetur sadipscing elitr, sed diam.</p>
-                            <a href="#0" class="more">Read More</a>
-                        </div>
-                    </div> <!-- single blog -->
-
-                    <div class="single_blog blog_2 d-sm-flex mt-30 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.4s">
-                        <div class="blog_image">
-                            <img src="../../assets/lp-ortu/images/blog-4.jpg" alt="blog">
-                        </div>
-                        <div class="blog_content media-body">
-                            <h3 class="blog_title"><a href="#0">Lorem ipsum dolor sit amet, consetetur sadipscing .</a></h3>
-                            <p>Lorem ipsum dolor sit consetetur sadipscing elitr, sed diam.</p>
-                            <a href="#0" class="more">Read More</a>
-                        </div>
-                    </div> <!-- single blog -->
+                    </div>
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
 
-    <!--====== BLOG PART ENDS ======-->
 
-    <!--====== CONTACT PART START ======-->
-
-    <section id="contact" class="contact_area bg_cover pt-120 pb-130" style="background-image: url(../../assets/lp-ortu/images/contact_bg.jpg)">
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title section_title_2 text-center pb-25">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Contact Us</h4>
-                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor sit
-                            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.</p>
-                    </div> <!-- section title -->
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
+                <h1 class="mb-5">Expert Instructors</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="../../assets/users/img/team-1.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Instructor Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
                 </div>
-            </div> <!-- row -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="../../assets/users/img/team-2.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Instructor Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="../../assets/users/img/team-3.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Instructor Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="../../assets/users/img/team-4.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Instructor Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
 
-            <form id="contact-form" action="../../assets/lp-ortu/contact.php" method="post" class="wow fadeInUp"
-                data-wow-duration="1.3s" data-wow-delay="0.4s">
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+                <h1 class="mb-5">Our Students Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="../../assets/users/img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <p>Profession</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="../../assets/users/img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <p>Profession</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="../../assets/users/img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <p>Profession</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="../../assets/users/img/testimonial-4.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <p>Profession</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+        
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="../../assets/users/img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="../../assets/users/img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="../../assets/users/img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="../../assets/users/img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="../../assets/users/img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="../../assets/users/img/course-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="single_form">
-                            <input type="text" placeholder="Name" name="name" id="name" required>
-                        </div> <!-- single form -->
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="single_form">
-                            <input type="email" placeholder="Email" name="email" id="email" required>
-                        </div> <!-- single form -->
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="single_form">
-                            <input type="text" placeholder="Phone Number" name="number" id="number" required>
-                        </div> <!-- single form -->
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="single_form">
-                            <input type="text" placeholder="Subject" name="subject" id="subject" required>
-                        </div> <!-- single form -->
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="single_form">
-                            <textarea placeholder="Message" name="message" id="message" required></textarea>
-                        </div> <!-- single form -->
-                    </div>
-
-                    <p class="form-message"></p>
-
-                    <div class="col-lg-12">
-                        <div class="single_form text-center">
-                            <button class="main-btn" type="submit">SUBMIT</button>
-                        </div> <!-- single form -->
-                    </div>
-                </div> <!-- row -->
-            </form>
-        </div> <!-- container -->
-    </section>
-
-    <!--====== CONTACT PART ENDS ======-->
-
-    <!--====== FOOTER PART START ======-->
-
-    <footer id="footer" class="footer_area">
-        <div class="container">
-            <div class="footer_wrapper text-center d-lg-flex align-items-center justify-content-between">
-                <p class="credit">Designed and Developed by <a href="https://uideck.com" rel="nofollow">UIdeck</a></p>
-                <div class="footer_social pt-15">
-                    <ul>
-                        <li><a href="#0"><i class="lni lni-facebook-original"></i></a></li>
-                        <li><a href="#0"><i class="lni lni-twitter-original"></i></a></li>
-                        <li><a href="#0"><i class="lni lni-instagram-original"></i></a></li>
-                        <li><a href="#0"><i class="lni lni-linkedin-original"></i></a></li>
-                    </ul>
-                </div> <!-- footer social -->
-            </div> <!-- footer wrapper -->
-        </div> <!-- container -->
-    </footer>
-
-    <!--====== FOOTER PART ENDS ======-->
-
-    <!--====== BACK TOP TOP PART START ======-->
-
-    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
-
-    <!--====== BACK TOP TOP PART ENDS ======-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
 
-    <!--====== Bootstrap js ======-->
-    <script src="../../assets/lp-ortu/js/bootstrap.bundle-5.0.0-beta1.min.js"></script>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!--====== glide js ======-->
-    <script src="../../assets/lp-ortu/js/tiny-slider.js"></script>
 
-    <!--====== wow js ======-->
-    <script src="../../assets/lp-ortu/js/wow.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!--====== Main js ======-->
-    <script src="../../assets/lp-ortu/js/main.js"></script>
-
+    <!-- Template Javascript -->
+    <script src="../../assets/users/js/main.js"></script>
 </body>
 
 </html>
