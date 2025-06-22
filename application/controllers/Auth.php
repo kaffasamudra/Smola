@@ -27,9 +27,9 @@ class Auth extends CI_Controller {
             if ($user->role == 'admin') {
                 redirect('admin_dashboard');
             } elseif ($user->role == 'pegawai') {
-                redirect('dashboard/pegawai');
+                redirect('pegawai_dashboard');
             } elseif ($user->role == 'ortu') {
-                redirect('dashboard/ortu');
+                redirect('ortu_dashboard');
             }
         } else {
             $this->session->set_flashdata('error', 'Login gagal!');
