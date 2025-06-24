@@ -10,4 +10,7 @@ $route['loginn'] = 'auth/loginn';
 $route['regis'] = 'auth/register';
 
 $route['admin_dashboard'] = 'admin/dashboard/index';
+$route['admin_kepegawaian_index'] = 'admin/kepegawaian/index';
+$route['admin_kepegawaian_edit_page'] = 'admin/kepegawaian/edit';
+
 $route['ortu_dashboard'] = 'ortu/dashboard/index';
