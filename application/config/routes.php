@@ -10,7 +10,9 @@ $route['loginn'] = 'auth/loginn';
 $route['regis'] = 'auth/register';
 
 $route['admin_dashboard'] = 'admin/dashboard/index';
-$route['admin_kepegawaian_index'] = 'admin/kepegawaian/index';
-$route['admin_kepegawaian_edit_page'] = 'admin/kepegawaian/edit';
+$route['admin_kepegawaian_index'] = 'admin/kepegawaian/index/index';
+$route['admin_kepegawaian_edit_page'] = 'admin/kepegawaian/edit/edit';
+$route['admin_kepegawaian_add_page'] = 'admin/kepegawaian/add/add';
+$route['admin_kepegawaian_delete_page'] = 'admin/kepegawaian/delete/delete';
 
 $route['ortu_dashboard'] = 'ortu/dashboard/index';

@@ -49,9 +49,9 @@
                     <div class="collapse <?= collapse_state(['admin_kepegawaian']) ?>" id="collapseKepegawaian">
                         <ul class="nav flex-column">
                             <li><a class="nav-link text-dark <?= menu_show(['admin_kepegawaian_index']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_kepegawaian_index') ?>">Data Pegawai</a></li>
-                            <li><a class="nav-link text-dark" href="#">Tambah Pegawai</a></li>
+                            <li><a class="nav-link text-dark <?= menu_show(['admin_kepegawaian_add_page']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_kepegawaian_add_page')?>">Tambah Pegawai</a></li>
                             <li><a class="nav-link text-dark <?= menu_show(['admin_kepegawaian_edit_page']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_kepegawaian_edit_page') ?>">Edit Pegawai</a></li>
-                            <li><a class="nav-link text-dark" href="#">Hapus Pegawai</a></li>
+                            <li><a class="nav-link text-dark <?= menu_show(['admin_kepegawaian_delete_page']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_kepegawaian_delete_page') ?>">Hapus Pegawai</a></li>
                             <li><a class="nav-link text-dark" href="#">Cetak Data Pegawai</a></li>
                             <li><a class="nav-link text-dark" href="#">Presensi Pegawai</a></li>
                         </ul>
