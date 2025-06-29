@@ -116,27 +116,27 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start custom pe-3">About Us</h6>
-                    <h1 class="mb-4">Welcome to eLEARNING</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <h1 class="mb-4">Welcome to PAUD TPA ATHAHIRA</h1>
+                    <p class="mb-4">Di PAUD TPA Athahira, kami percaya bahwa masa kecil adalah masa paling berharga untuk tumbuh, bermain, dan belajar.</p>
+                    <p class="mb-4">Dengan pendekatan penuh kasih dan program pembelajaran yang menyenangkan, kami hadir untuk mendampingi buah hati Anda bertumbuh dengan cinta, keceriaan, dan nilai-nilai Moral.</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>Skilled Instructors</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>Guru sabar & ceria</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>Online Classes</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>Belajar sambil bermain</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>International Certificate</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>Lingkungan aman & nyaman</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>Skilled Instructors</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>Tumbuh dengan cinta</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>Online Classes</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>Kegiatan seru tiap hari</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>International Certificate</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right custom me-2"></i>Teman-teman menyenangkan</p>
                         </div>
                     </div>
                     <a class="btn btn-primary custom-btn py-3 px-5 mt-2" href="">Read More</a>
