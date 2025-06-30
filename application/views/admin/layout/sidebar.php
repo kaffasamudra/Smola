@@ -1,4 +1,4 @@
-    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-radius-lg fixed-start ms-2  bg-white my-2" id="sidenav-main">
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-radius-lg fixed-start ms-2 bg-white my-2" id="sidenav-main">
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand px-4 py-3 m-0" href="<?= site_url('admin_dashboard') ?>">
@@ -49,9 +49,6 @@
                     <div class="collapse <?= collapse_state(['admin_kepegawaian']) ?>" id="collapseKepegawaian">
                         <ul class="nav flex-column">
                             <li><a class="nav-link text-dark <?= menu_show(['admin_kepegawaian_index']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_kepegawaian_index') ?>">Data Pegawai</a></li>
-                            <li><a class="nav-link text-dark <?= menu_show(['admin_kepegawaian_add_page']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_kepegawaian_add_page')?>">Tambah Pegawai</a></li>
-                            <li><a class="nav-link text-dark <?= menu_show(['admin_kepegawaian_edit_page']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_kepegawaian_edit_page') ?>">Edit Pegawai</a></li>
-                            <li><a class="nav-link text-dark <?= menu_show(['admin_kepegawaian_delete_page']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_kepegawaian_delete_page') ?>">Hapus Pegawai</a></li>
                             <li><a class="nav-link text-dark" href="#">Cetak Data Pegawai</a></li>
                             <li><a class="nav-link text-dark" href="#">Presensi Pegawai</a></li>
                         </ul>

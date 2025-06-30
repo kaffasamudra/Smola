@@ -44,6 +44,10 @@
         .nav .nav-link {
             transition: all 0.2s ease !important;
         }
+        .btn-no-outline{
+            border: none !important;
+            background-color: transparent !important;
+        }
     </style>
 </head>
 
@@ -52,6 +56,13 @@
 
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <?php $this->load->view('admin/layout/navbar'); ?>
+        <div class="p-4">
+            <?php if (validation_errors()) : ?>
+                <div class="alert alert-danger" role="alert">
+                    <p><?= validation_errors() ?></p>
+                </div>
+            <?php endif; ?>
+        </div>
         <?= isset($content) ? $content : '' ?>
     </main>
 

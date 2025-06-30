@@ -8,23 +8,23 @@
                             </div>
                         </div>
                         <div class="modal-body">
-                            <form role="form" class="text-start" action="<?php echo site_url('admin_kepegawaian_input') ?>" method="post">
+                            <form role="form" class="text-start" action="<?php echo site_url('admin_kepegawaian_input') ?>" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                 <div class="input-group input-group-outline my-3">
                                     <label class="form-label">NIP</label>
-                                    <input name="nip" type="text" class="form-control" value="<?= $pegawai['nip'] ?>">
+                                    <input name="nip" type="text" class="form-control">
                                 </div>
                                 <div class="input-group input-group-outline my-3">
                                     <label class="form-label">Nama</label>
-                                    <input name="nama" type="text" class="form-control" value="<?= $pegawai['nama'] ?>">
+                                    <input name="nama" type="text" class="form-control">
                                 </div>
                                 <div class="input-group input-group-outline my-3">
                                     <label class="form-label">Alamat</label>
-                                    <input name="alamat" type="text" class="form-control" value="<?= $pegawai['alamat'] ?>">
+                                    <input name="alamat" type="text" class="form-control">
                                 </div>
                                 <div class="input-group input-group-outline my-3">
                                     <label class="form-label">No Handphone</label>
-                                    <input name="telp" type="number" class="form-control" value="<?= $pegawai['telp'] ?>">
+                                    <input name="telp" type="number" class="form-control">
                                 </div>
                                 <div class="input-group input-group-outline my-3 position-relative">
                                     <select name="jabatan" class="form-control pe-5">
@@ -39,7 +39,9 @@
                                 <div class="input-group input-group-outline my-3 position-relative">
                                     <select name="user_id" class="form-control pe-5">
                                         <option selected hidden>Email</option>
-                                        <option value="null">Default</option>
+                                        <?php foreach ($users as $user) : ?>
+                                            <option value="<?= $user->id ?>"><?= $user->email ?></option>
+                                        <?php endforeach; ?>
                                     </select>
                                     <span class="material-symbols-rounded position-absolute end-0 top-50 translate-middle-y me-3 text-secondary pointer-events-none transition-arrow">
                                         keyboard_arrow_down
