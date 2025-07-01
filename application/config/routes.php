@@ -10,9 +10,20 @@ $route['loginn'] = 'auth/loginn';
 $route['regis'] = 'auth/register';
 
 $route['admin_dashboard'] = 'admin/dashboard/index';
-$route['admin_kepegawaian_index'] = 'admin/kepegawaian/index';
-$route['admin_kepegawaian_edit'] = 'admin/kepegawaian/edit';
-$route['admin_kepegawaian_input'] = 'admin/kepegawaian/input';
-$route['admin_kepegawaian_delete'] = 'admin/kepegawaian/delete';
+
+$route['admin_users_index'] = 'admin/users/index';
+$route['admin_users_edit'] = 'admin/users/edit';
+$route['admin_users_input'] = 'admin/users/input';
+$route['admin_users_delete'] = 'admin/users/delete';
+
+$route['admin_pegawai_index'] = 'admin/pegawai/index';
+$route['admin_pegawai_edit'] = 'admin/pegawai/edit';
+$route['admin_pegawai_input'] = 'admin/pegawai/input';
+$route['admin_pegawai_delete'] = 'admin/pegawai/delete';
+
+$route['admin_siswa_index'] = 'admin/siswa/index';
+$route['admin_siswa_edit'] = 'admin/siswa/edit';
+$route['admin_siswa_input'] = 'admin/siswa/input';
+$route['admin_siswa_delete'] = 'admin/siswa/delete';
 
 $route['ortu_dashboard'] = 'ortu/dashboard/index';
