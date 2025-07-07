@@ -36,20 +36,20 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark d-flex <?= toggle_class(['admin_kepegawaian']) ?>"
+                    <a class="nav-link text-dark d-flex <?= toggle_class(['admin_pegawai']) ?>"
                         data-bs-toggle="collapse"
                         href="#collapseKepegawaian"
-                        aria-expanded="<?= aria_expanded(['admin_kepegawaian']) ?>"
+                        aria-expanded="<?= aria_expanded(['admin_pegawai']) ?>"
                         aria-controls="collapseKepegawaian">
                         <i class="material-symbols-rounded opacity-5">article_person</i>
                         <span class="nav-link-text ms-1">Kepegawaian</span>
                         <i class="material-symbols-rounded transition-arrow">keyboard_arrow_down</i>
                     </a>
 
-                    <div class="collapse <?= collapse_state(['admin_kepegawaian']) ?>" id="collapseKepegawaian">
+                    <div class="collapse <?= collapse_state(['admin_pegawai']) ?>" id="collapseKepegawaian">
                         <ul class="nav flex-column">
-                            <li><a class="nav-link text-dark <?= menu_show(['admin_kepegawaian_index']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_kepegawaian_index') ?>">Data Pegawai</a></li>
-                            <li><a class="nav-link text-dark" href="#">Cetak Data Pegawai</a></li>
+                            <li><a class="nav-link text-dark <?= menu_show(['admin_pegawai_index']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_pegawai_index') ?>">Data Pegawai</a></li>
+                            <!-- <li><a class="nav-link text-dark" href="#">Cetak Data Pegawai</a></li> -->
                             <li><a class="nav-link text-dark" href="#">Presensi Pegawai</a></li>
                         </ul>
                     </div>
@@ -62,12 +62,7 @@
                     </a>
                     <div class="collapse" id="collapseKesiswaan">
                         <ul class="nav flex-column">
-                            <li><a class="nav-link text-dark" href="#">Kelas Baby</a></li>
-                            <li><a class="nav-link text-dark" href="#">Kelas PAUD</a></li>
-                            <li><a class="nav-link text-dark" href="#">Tambah Siswa</a></li>
-                            <li><a class="nav-link text-dark" href="#">Edit Siswa</a></li>
-                            <li><a class="nav-link text-dark" href="#">Hapus Siswa</a></li>
-                            <li><a class="nav-link text-dark" href="#">Cetak Kartu</a></li>
+                            <li><a class="nav-link text-dark" href="<?= site_url('admin_siswa_index') ?>">Data Siswa</a></li>
                             <li><a class="nav-link text-dark" href="#">Detail Siswa</a></li>
                             <li><a class="nav-link text-dark" href="#">Presensi Siswa</a></li>
                         </ul>

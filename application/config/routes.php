@@ -17,9 +17,9 @@ $route['admin_users_input'] = 'admin/users/input';
 $route['admin_users_delete'] = 'admin/users/delete';
 
 $route['admin_pegawai_index'] = 'admin/pegawai/index';
-$route['admin_pegawai_edit'] = 'admin/pegawai/edit';
-$route['admin_pegawai_input'] = 'admin/pegawai/input';
-$route['admin_pegawai_delete'] = 'admin/pegawai/delete';
+$route['admin_pegawai_index_edit'] = 'admin/pegawai/edit';
+$route['admin_pegawai_index_input'] = 'admin/pegawai/input';
+$route['admin_pegawai_index_delete'] = 'admin/pegawai/delete';
 
 $route['admin_siswa_index'] = 'admin/siswa/index';
 $route['admin_siswa_edit'] = 'admin/siswa/edit';

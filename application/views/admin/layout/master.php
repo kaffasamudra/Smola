@@ -13,6 +13,7 @@
     <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -44,7 +45,8 @@
         .nav .nav-link {
             transition: all 0.2s ease !important;
         }
-        .btn-no-outline{
+
+        .btn-no-outline {
             border: none !important;
             background-color: transparent !important;
         }
@@ -140,7 +142,8 @@
             </div>
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="<?= base_url("assets/admin/") ?>/js/core/popper.min.js"></script>
     <script src="<?= base_url("assets/admin/") ?>js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url("assets/admin/") ?>/js/plugins/perfect-scrollbar.min.js"></script>
@@ -405,6 +408,45 @@
             }
             Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
         }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.edit-btn').on('click', function() {
+                $('#edit-id').val($(this).data('id'));
+                $('#edit-nip').val($(this).data('nip'));
+                $('#edit-nama').val($(this).data('nama'));
+                $('#edit-alamat').val($(this).data('alamat'));
+                $('#edit-telp').val($(this).data('telp'));
+                $('#edit-telp').val($(this).data('telp'));
+                $('#edit-jabatan').val($(this).data('jabatan'));
+                $('#edit-foto').val($(this).data('foto'));
+                $('#edit-user_id').val($(this).data('user_id'));
+            });
+
+            $('.delete-btn').on('click', function(e) {
+                e.preventDefault();
+                const id = $('#delete-id').val($(this).data('id'));
+                const nama = $(this).data('nama');
+
+                Swal.fire({
+                    title: 'Apakah Anda Yakin?',
+                    text: `Data "${nama}" akan dihapus permanen!`,
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ya, Hapus!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        const form = $('#deleteForm');
+                        form.attr('action', '<?= site_url('admin_pegawai_index_delete') ?>');
+                        $('#delete-id').val(id);
+                        form.submit();
+                    }
+                });
+            });
+        });
     </script>
 </body>
 
