@@ -19,7 +19,3 @@ class Siswa extends CI_Controller
   }
 
 }
-
-
-/* End of file Siswa.php */
-/* Location: ./application/controllers/Siswa.php */

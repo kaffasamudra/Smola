@@ -16,24 +16,20 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark d-flex <?= toggle_class(['admin_users']) ?>"
-                        data-bs-toggle="collapse"
-                        href="#collapseUsers"
-                        aria-expanded="<?= aria_expanded(['admin_users']) ?>"
-                        aria-controls="collapseUsers">
+                    <a class="nav-link text-dark d-flex <?= menu_show(['admin_users_index']) ? 'active bg-gradient-dark text-white' : '' ?>"
+                        href="<?= site_url('admin_users_index') ?>">
                         <i class="material-symbols-rounded opacity-5">admin_panel_settings</i>
                         <span class="nav-link-text ms-1">Manajemen Pengguna</span>
-                        <i class="material-symbols-rounded transition-arrow">keyboard_arrow_down</i>
                     </a>
-
+<!-- 
                     <div class="collapse <?= collapse_state(['admin_users']) ?>" id="collapseUsers">
                         <ul class="nav flex-column">
-                            <li><a class="nav-link text-dark" href="#">Data Pengguna</a></li>
+                            <li><a class="nav-link text-dark " href="<?= site_url('admin_users_index') ?>">Data Pengguna</a></li>
                             <li><a class="nav-link text-dark" href="#">Tambah Pengguna</a></li>
                             <li><a class="nav-link text-dark" href="#">Edit Pengguna</a></li>
                             <li><a class="nav-link text-dark" href="#">Hapus Pengguna</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark d-flex <?= toggle_class(['admin_pegawai']) ?>"
