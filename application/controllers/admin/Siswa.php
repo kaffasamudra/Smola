@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Siswa extends CI_Controller
 {
-    
+
   public function __construct()
   {
     parent::__construct();
@@ -18,4 +18,10 @@ class Siswa extends CI_Controller
     $this->load->view('admin/layout/master', $data);
   }
 
+  public function detail()
+  {
+    $data['title'] = 'Detail Siswa';
+    $data['content'] =  $this->load->view('admin/siswa/detail', $data, true);
+    $this->load->view('admin/layout/master', $data);
+  }
 }

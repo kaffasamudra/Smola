@@ -25,5 +25,12 @@ $route['admin_siswa_index'] = 'admin/siswa/index';
 $route['admin_siswa_edit'] = 'admin/siswa/edit';
 $route['admin_siswa_input'] = 'admin/siswa/input';
 $route['admin_siswa_delete'] = 'admin/siswa/delete';
+$route['admin_siswa_detail'] = 'admin/siswa/detail';
+
+$route['admin_buku_index'] = 'admin/buku/index';
+$route['admin_buku_edit'] = 'admin/buku/edit';
+$route['admin_buku_input'] = 'admin/buku/input';
+$route['admin_buku_delete'] = 'admin/buku/delete';
+$route['admin_buku_detail'] = 'admin/buku/detail';
 
 $route['ortu_dashboard'] = 'ortu/dashboard/index';

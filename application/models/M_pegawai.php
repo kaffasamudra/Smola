@@ -10,7 +10,7 @@ class M_pegawai extends CI_Model
 
     public function get_all()
     {
-        $this->db->select('pegawai.*, users.*');
+        $this->db->select('pegawai.*, users.id as user_id, users.email as user_email');
         $this->db->from('pegawai');
         $this->db->join('users', 'users.id = pegawai.user_id', 'left');
         return $this->db->get()->result();

@@ -1,6 +1,13 @@
         <div class="modal fade container-fluid py-2" id="modalTambah" tabindex="-1" aria-labelledby="modalTambahLabel" aria-hidden="true">
             <div class="row modal-dialog">
                 <div class="col-12 modal-content pt-4">
+                    <div class="">
+                        <?php if (validation_errors()) : ?>
+                            <div class="alert alert-danger" role="alert">
+                                <p><?= validation_errors() ?></p>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                     <div class="card my-4">
                         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                             <div class="modal-header bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3">

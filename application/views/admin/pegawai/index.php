@@ -37,7 +37,7 @@
                                                 <td>
                                                     <div class="d-flex px-2">
                                                         <div>
-                                                            <img src="<?= base_url('assets/images/pegawai/' . $p->foto) ?>" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
+                                                            <img src="<?= base_url('assets/admin/img/' . $p->foto) ?>" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
                                                         </div>
                                                         <div class="my-auto">
                                                             <h6 class="mb-0 text-sm"><?= $p->nama ?></h6>
@@ -55,7 +55,7 @@
                                                 </td>
                                                 <td class="align-middle text-center">
                                                     <div class="d-flex align-items-center justify-content-center">
-                                                        <span class="me-2 text-xs font-weight-bold"><?= $p->email ?></span>
+                                                        <span class="me-2 text-xs font-weight-bold"><?= $p->user_email ?></span>
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center">

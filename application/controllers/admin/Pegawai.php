@@ -39,14 +39,14 @@ class Pegawai extends CI_Controller
         $this->form_validation->set_rules('user_id', 'Email', 'required|trim');
 
         if ($this->form_validation->run() == FALSE) {
+            $data['open_modal'] = true;
             $data['content'] = $this->load->view('admin/pegawai/index', $data, true);
             $this->load->view('admin/layout/master', $data);
         } else {
-            $config['upload_path']          = './assets/images/pegawai/';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg';
-            $config['max_size']             = 100000;
-            $config['max_width']            = 1024;
-            $config['max_height']           = 768;
+            $config['upload_path']   = './assets/admin/img';
+            $config['allowed_types'] = 'jpg|jpeg|png';
+            $config['max_size']      = 2048;
+            $config['encrypt_name']  = TRUE;
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('foto')) {
                 $error = array('error' => $this->upload->display_errors());
@@ -57,25 +57,27 @@ class Pegawai extends CI_Controller
                 return;
             } else {
 
-                $data = [
-                    'nip' => $this->input->post('nip'),
-                    'nama' => $this->input->post('nama'),
-                    'alamat' => $this->input->post('alamat'),
-                    'telp' => $this->input->post('telp'),
-                    'jabatan' => $this->input->post('jabatan'),
-                    'user_id' => $this->input->post('user_id') == 'null' ? null : $this->input->post('user_id'),
-                    'foto'     => $this->upload->data('file_name')
-                ];
-            }
+                $upload_datas = $this->upload->data('');
+                $foto = $upload_datas['file_name'];
 
-            $this->M_pegawai->update($id, $data);
-            redirect('admin_pegawai_index');
+                $datas = [
+                    'nama'     => $this->input->post('nama'),
+                    'nip'      => $this->input->post('nip'),
+                    'alamat'   => $this->input->post('alamat'),
+                    'telp'     => $this->input->post('telp'),
+                    'jabatan'  => $this->input->post('jabatan'),
+                    'user_id'  => $this->input->post('user_id'),
+                    'foto'     => $foto
+                ];
+                $this->M_pegawai->update($id, $datas);
+                redirect('admin_pegawai_index');
+            }
         }
     }
     public function input()
     {
         $data['title'] = 'Kepegawaian - Data Pegawai';
-        $data['users'] = $this->M_users->get_all();
+        $users = $this->M_users->get_all();
 
         $this->form_validation->set_rules('nama', 'Nama', 'required');
         $this->form_validation->set_rules('nip', 'NIP', 'required');
@@ -84,34 +86,37 @@ class Pegawai extends CI_Controller
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
         $this->form_validation->set_rules('user_id', 'Email', 'required');
         if ($this->form_validation->run() == FALSE) {
+            $data['open_modal'] = true;
             $data['pegawai'] = $this->M_pegawai->get_all();
             $data['content'] =  $this->load->view('admin/pegawai/index', $data, true);
             $this->load->view('admin/layout/master', $data);
         } else {
-            $config['upload_path']          = './assets/images/pegawai/';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg';
-            $config['max_size']             = 100000;
-            $config['max_width']            = 1024;
-            $config['max_height']           = 768;
+            $config['upload_path']   = './assets/admin/img';
+            $config['allowed_types'] = 'jpg|jpeg|png';
+            $config['max_size']      = 2048;
+            $config['encrypt_name']  = TRUE;
             $this->load->library('upload', $config);
+            // var_dump($_FILES); exit;
             if (!$this->upload->do_upload('foto')) {
                 $error = array('error' => $this->upload->display_errors());
                 $data['pegawai'] = $this->M_pegawai->get_all();
                 $data['error'] = $error['error'];
                 $data['content'] =  $this->load->view('admin/pegawai/index', $data, true);
                 $this->load->view('admin/layout/master', $data);
-                return;
             } else {
-                $data = [
+                $upload_datas = $this->upload->data('');
+                $foto = $upload_datas['file_name'];
+
+                $datas = [
                     'nama'     => $this->input->post('nama'),
                     'nip'      => $this->input->post('nip'),
                     'alamat'   => $this->input->post('alamat'),
                     'telp'     => $this->input->post('telp'),
                     'jabatan'  => $this->input->post('jabatan'),
                     'user_id'  => $this->input->post('user_id'),
-                    'foto'     => $this->upload->data('file_name')
+                    'foto'     => $foto ?? '.assets\admin\img\ivancik.jpg'
                 ];
-                $this->M_pegawai->insert($data);
+                $this->M_pegawai->insert($datas);
                 redirect('admin_pegawai_index');
             }
         }

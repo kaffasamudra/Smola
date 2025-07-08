@@ -51,15 +51,19 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark d-flex" href="#collapseKesiswaan" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseKesiswaan">
+                    <a class="nav-link text-dark d-flex <?= toggle_class(['admin_siswa']) ?>" 
+                    href="#collapseKesiswaan" 
+                    data-bs-toggle="collapse" 
+                    aria-expanded="<?= aria_expanded(['admin_siswa']) ?>" 
+                    aria-controls="collapseKesiswaan">
                         <i class="material-symbols-rounded opacity-5">school</i>
                         <span class="nav-link-text ms-1">Kesiswaan</span>
                         <i class="material-symbols-rounded transition-arrow">keyboard_arrow_down</i>
                     </a>
-                    <div class="collapse" id="collapseKesiswaan">
+                    <div class="collapse <?= collapse_state(['admin_siswa']) ?>" id="collapseKesiswaan">
                         <ul class="nav flex-column">
-                            <li><a class="nav-link text-dark" href="<?= site_url('admin_siswa_index') ?>">Data Siswa</a></li>
-                            <li><a class="nav-link text-dark" href="#">Detail Siswa</a></li>
+                            <li><a class="nav-link text-dark <?= menu_show(['admin_siswa_index']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_siswa_index') ?>">Data Siswa</a></li>
+                            <!-- <li><a class="nav-link text-dark" href="<?= site_url('admin_siswa_detail') ?>">Detail Siswa</a></li> -->
                             <li><a class="nav-link text-dark" href="#">Presensi Siswa</a></li>
                         </ul>
                     </div>
@@ -74,6 +78,12 @@
                     <a class="nav-link text-dark" href="../pages/notifications.html">
                         <i class="material-symbols-rounded opacity-5">archive</i>
                         <span class="nav-link-text ms-1">Arsip</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark <?= menu_show(['admin_buku_index']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_buku_index') ?>">
+                        <i class="material-symbols-rounded opacity-5">book</i>
+                        <span class="nav-link-text ms-1">Inventaris Buku</span>
                     </a>
                 </li>
                 <li class="nav-item mt-3">
