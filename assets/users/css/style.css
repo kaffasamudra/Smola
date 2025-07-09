@@ -442,3 +442,9 @@
     border-color: #ff69b4 !important;
     color: white !important;
 }
+
+.active-list {
+    background-color: #ff69b4 !important; /* pink muda */
+    border-color: #ff69b4 !important;
+    color: white !important;
+}
