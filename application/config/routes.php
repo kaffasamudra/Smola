@@ -33,4 +33,13 @@ $route['admin_buku_input'] = 'admin/buku/input';
 $route['admin_buku_delete'] = 'admin/buku/delete';
 $route['admin_buku_detail'] = 'admin/buku/detail';
 
+$route['admin_berita_index'] = 'admin/berita/index';
+$route['admin_berita_edit'] = 'admin/berita/edit';
+$route['admin_berita_input'] = 'admin/berita/input';
+$route['admin_berita_delete'] = 'admin/berita/delete';
+$route['admin_berita_detail'] = 'admin/berita/detail';
+
 $route['ortu_dashboard'] = 'ortu/dashboard/index';
+$route['ortu_berita'] = 'ortu/beritaortu/index';
+$route['ortu_buku'] = 'ortu/bukuortu/index';
+$route['ortu_buku_detail'] = 'ortu/bukuortu/detail';

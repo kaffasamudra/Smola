@@ -4,7 +4,7 @@
                     <div class="card my-4">
                         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                             <div class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3 d-flex justify-content-between align-items-center">
-                                <h6 class="text-white text-capitalize ps-3">Data Buku</h6>
+                                <h6 class="text-white text-capitalize ps-3">Data Berita</h6>
                                 <div class="flex align-items-center me-3">
                                     <button class="btn btn-info"><i class="material-symbols-rounded">print</i></button>
                                     <button class="btn btn-warning"><i class="fas fa-file-excel"></i></button>
@@ -12,18 +12,17 @@
                                 </div>
                             </div>
                         </div>
-                        <?php $this->load->view('admin/buku/input'); ?>
-                        <?php $this->load->view('admin/buku/edit'); ?>
+                        <?php $this->load->view('admin/berita/input'); ?>
+                        <?php $this->load->view('admin/berita/edit'); ?>
                         <div class="card-body px-0 pb-2">
                             <div class="table-responsive p-0">
                                 <table class="table align-items-center justify-content-center mb-0">
                                     <thead>
                                         <tr>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Judul Buku</th>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">ISBN</th>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Penerbit</th>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Author</th>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Tahun Terbit</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Judul Berita</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Deskripsi</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tanggal Terbit</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Author</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Aksi</th>
                                             <th></th>
                                         </tr>

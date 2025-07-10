@@ -69,6 +69,18 @@
                     </div>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-dark <?= menu_show(['admin_berita_index']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_berita_index') ?>">
+                        <i class="material-symbols-rounded opacity-5">newspaper</i>
+                        <span class="nav-link-text ms-1">Manajemen Berita</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark <?= menu_show(['admin_buku_index']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_buku_index') ?>">
+                        <i class="material-symbols-rounded opacity-5">book</i>
+                        <span class="nav-link-text ms-1">Inventaris Buku</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-dark" href="../pages/rtl.html">
                         <i class="material-symbols-rounded opacity-5">monitoring</i>
                         <span class="nav-link-text ms-1">Laporan</span>
@@ -78,12 +90,6 @@
                     <a class="nav-link text-dark" href="../pages/notifications.html">
                         <i class="material-symbols-rounded opacity-5">archive</i>
                         <span class="nav-link-text ms-1">Arsip</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark <?= menu_show(['admin_buku_index']) ? 'active bg-gradient-dark text-white' : '' ?>" href="<?= site_url('admin_buku_index') ?>">
-                        <i class="material-symbols-rounded opacity-5">book</i>
-                        <span class="nav-link-text ms-1">Inventaris Buku</span>
                     </a>
                 </li>
                 <li class="nav-item mt-3">

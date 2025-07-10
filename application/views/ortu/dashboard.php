@@ -48,8 +48,8 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="<?= site_url('ortu_dashboard') ?>" class="nav-item nav-link active">Home</a>
                 <a href="<?=  site_url('ortu_berita') ?>" class="nav-item nav-link">Berita</a>
-                <!-- <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <div class="nav-item dropdown">
+                <a href="<?=  site_url('ortu_buku') ?>" class="nav-item nav-link">Buku</a>
+                <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
                         <a href="team.html" class="dropdown-item">Our Team</a>

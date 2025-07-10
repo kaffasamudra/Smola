@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Berita extends CI_Controller
 {
-    
+
   public function __construct()
   {
     parent::__construct();
@@ -11,11 +11,8 @@ class Berita extends CI_Controller
 
   public function index()
   {
-    $this->load->view('ortu/berita');
+    $data['title'] = 'Manajemen Berita';
+    $data['content'] =  $this->load->view('admin/berita/index', $data, true);
+    $this->load->view('admin/layout/master', $data);
   }
-
 }
-
-
-/* End of file Berita.php */
-/* Location: ./application/controllers/Berita.php */
