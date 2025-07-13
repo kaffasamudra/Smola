@@ -14,7 +14,7 @@
               <div class="card-header">Detail Buku</div>
               <div class="card-body text-center">
                 <img class="img-account-profile rounded-circle mb-3" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="Cover Buku" width="120">
-                <h5 class="card-title text-primary">Judul Buku</h5>
+                <h5 class="card-title text-custom">Judul Buku</h5>
               </div>
             </div>
           </div>

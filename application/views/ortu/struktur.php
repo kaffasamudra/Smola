@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,8 +66,8 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="<?= site_url('ortu_dashboard') ?>" class="nav-item nav-link ">Home</a>
                 <a href="<?= site_url('ortu_berita') ?>" class="nav-item nav-link ">Berita</a>
-                <a href="<?= site_url('ortu_buku') ?>" class="nav-item nav-link active">Buku</a>
-                <a href="<?= site_url('ortu_struktur_paud') ?>" class="nav-item nav-link ">Struktur</a>
+                <a href="<?= site_url('ortu_buku') ?>" class="nav-item nav-link">Buku</a>
+                <a href="<?= site_url('ortu_struktur_paud') ?>" class="nav-item nav-link active">Struktur</a>
                 <a href="<?= site_url('ortu_kalender_akademik') ?>" class="nav-item nav-link">Kalender</a>
             </div>
             <a href="" class="btn btn-primary custom-btn custom-btn py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
@@ -77,33 +76,92 @@
     <!-- Navbar End -->
 
     <!-- Main Content Start -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 my-lg-4 p-4">
-        <?php $this->load->view('ortu/buku/detail'); ?>
+    <div class="container-fluid py-5">
+        <div class="row g-4 justify-content-center">
 
-        <!-- Book Item -->
-        <div class="col">
-            <div class="card h-100 border-0 shadow-sm">
-                <img src="./assets/admin/img/drake.jpg" class="card-img-top" alt="Cover 4">
-                <div class="card-body px-3">
-                    <h6 class="card-title fw-semibold">Mobile UI Design Trends Present & Future</h6>
-                </div>
-                <div class="card-footer bg-white border-0 px-3 pb-3">
-                    <button type="button" class="btn custom-btn" data-bs-toggle="modal" data-bs-target="#modalDetailBuku">
-                        Lihat Detail Buku
-                    </button>
+            <!-- Kepala Sekolah -->
+            <div class="col-12 col-md-6">
+                <div class="card text-center h-100 shadow-lg border-0 rounded-4 custom-pink text-white hover-scale">
+                    <div class="card-body">
+                        <h3 class="mb-1">Test</h3>
+                        <h6 class="fw-light">Kepala Sekolah</h6>
+                    </div>
                 </div>
             </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card text-center h-100 shadow-lg border-0 rounded-4 custom-pink text-white hover-scale">
+                    <div class="card-body">
+                        <h3 class="mb-1">Test</h3>
+                        <h6 class="fw-light">Kepala Sekolah</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pegawai -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card text-center h-100 shadow-sm border-0 rounded-4 custom-light hover-scale">
+                    <div class="card-body">
+                        <h3 class="mb-1">Test</h3>
+                        <h6 class="fw-light">Pegawai</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Duplikasi col pegawai -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card text-center h-100 shadow-sm border-0 rounded-4 custom-light hover-scale">
+                    <div class="card-body">
+                        <h3 class="mb-1">Test</h3>
+                        <h6 class="fw-light">Pegawai</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card text-center h-100 shadow-sm border-0 rounded-4 custom-light hover-scale">
+                    <div class="card-body">
+                        <h3 class="mb-1">Test</h3>
+                        <h6 class="fw-light">Pegawai</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card text-center h-100 shadow-sm border-0 rounded-4 custom-light hover-scale">
+                    <div class="card-body">
+                        <h3 class="mb-1">Test</h3>
+                        <h6 class="fw-light">Pegawai</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card text-center h-100 shadow-sm border-0 rounded-4 custom-light hover-scale">
+                    <div class="card-body">
+                        <h3 class="mb-1">Test</h3>
+                        <h6 class="fw-light">Pegawai</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card text-center h-100 shadow-sm border-0 rounded-4 custom-light hover-scale">
+                    <div class="card-body">
+                        <h3 class="mb-1">Test</h3>
+                        <h6 class="fw-light">Pegawai</h6>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-        <!-- Tambah lebih banyak kartu di sini jika perlu -->
-
     </div>
     <!-- Main Content End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
-        <div class="container-fluid py-5">
-            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+        <div class="py-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center flex-row-reverse">
 
                 <!-- Quick Link -->
                 <div class="col">
@@ -117,7 +175,7 @@
                 </div>
 
                 <!-- Find Us -->
-                <div class="col text-center">
+                <div class="col text-md-center text-start">
                     <h4 class="text-white mb-4">Find Us</h4>
                     <p class="mb-2 small">
                         <i class="fa fa-map-marker-alt me-2"></i>
@@ -126,7 +184,7 @@
                     <p class="mb-2 small">
                         <i class="fa fa-phone-alt me-2"></i> +62 812-1564-9033
                     </p>
-                    <div class="d-flex justify-content-center gap-2 pt-2">
+                    <div class="d-flex justify-content-md-center gap-2 pt-2">
                         <a class="btn btn-outline-light btn-sm rounded-circle" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-sm rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-sm rounded-circle" href=""><i class="fab fa-youtube"></i></a>
@@ -135,27 +193,9 @@
                 </div>
 
                 <!-- Gallery -->
-                <div class="col text-end">
-                    <h4 class="text-white mb-4">Gallery</h4>
-                    <div class="row g-2">
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-1.jpg" alt="">
-                        </div>
+                <div class="col justify-content-center">
+                    <div class="col-10">
+                        <img class="img-fluid float-start bg-light p-1 rounded-1" src="<?= base_url('./assets/users/img/') ?>logo paud athahira.png" alt="">
                     </div>
                 </div>
 
