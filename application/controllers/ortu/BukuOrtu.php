@@ -9,9 +9,11 @@ class BukuOrtu extends CI_Controller
     parent::__construct();
   }
 
-public function index()
+  public function index()
   {
-    $this->load->view('ortu/buku/index');
+    $data['title'] = 'PAUD TPA Athahira - Buku';
+    $data['content'] =  $this->load->view('ortu/buku/index', $data, true);
+    $this->load->view('ortu/layout/master', $data);
   }
 
 public function detail()

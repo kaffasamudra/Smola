@@ -7,15 +7,15 @@ class BeritaOrtu extends CI_Controller
   public function __construct()
   {
     parent::__construct();
+            $this->load->helper('sidebar_helper');
+
   }
 
   public function index()
   {
-    $this->load->view('ortu/berita');
+    $data['title'] = 'PAUD TPA Athahira - Berita';
+    $data['content'] =  $this->load->view('ortu/berita', $data, true);
+    $this->load->view('ortu/layout/master', $data);
   }
 
 }
-
-
-/* End of file Berita.php */
-/* Location: ./application/controllers/Berita.php */
