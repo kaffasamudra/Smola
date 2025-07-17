@@ -11,7 +11,9 @@ class Struktur extends CI_Controller
 
   public function index()
   {
-    $this->load->view('ortu/struktur'); 
+    $data['title'] = 'PAUD TPA Athahira - Struktur Paud';
+    $data['content'] =  $this->load->view('ortu/struktur', $data, true);
+    $this->load->view('ortu/layout/master', $data);
   }
 
 }
