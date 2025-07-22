@@ -41,6 +41,17 @@
             background-color: #ffe6e9 !important;
             color: #fff !important;
         }
+
+        footer a:hover {
+            color: #00BFFF !important;
+            text-decoration: underline;
+        }
+
+        footer .btn-outline-light:hover {
+            background-color: #00BFFF;
+            border-color: #00BFFF;
+            color: white;
+        }
     </style>
 </head>
 
@@ -53,7 +64,7 @@
     </div>
     <!-- Spinner End -->
 
-<!-- Navbar Start -->
+    <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 flex-nowrap">
         <a href="<?= base_url('ortu_dashboard') ?>" class="navbar-brand d-flex align-items-center px-2 px-lg-5">
             <img src="<?= base_url("assets/users/") ?>img/logo paud athahira.png" class="me-3" style="height: 40px;" alt="Logo">
@@ -82,67 +93,50 @@
     </main>
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
+    <footer class="bg-dark text-light pt-5 mt-5">
         <div class="container-fluid py-5">
-            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+            <div class="row gy-4 justify-content-around align-items-center text-center text-lg-start">
+                <!-- Kontak -->
+                <div class="col-6 col-lg-2">
+                    <h5 class="text-white mb-3">Hubungi Kami</h5>
+                    <p class="small mb-1"><i class="fa fa-map-marker-alt me-2"></i>48MP+V8M, Gg. Teratai, Sewon, Bantul</p>
+                    <p class="small mb-1"><i class="fa fa-phone-alt me-2"></i>+62 812-1564-9033</p>
+                    <div class="d-flex gap-2 mt-2 justify-content-center justify-content-lg-start">
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Deskripsi Singkat -->
+                <div class="col-12 col-md-4 text-center">
+                    <h4 class="text-white mb-3">Tentang Kami</h4>
+                    <p class="small text-muted">
+                        Lembaga Pelatihan dan Pendidikan yang berfokus pada pengembangan keterampilan praktis untuk siswa dari tingkat dasar hingga alumni.
+                        Kami hadir untuk mendampingi perjalanan belajar Anda dengan metode inovatif dan lingkungan yang mendukung.
+                    </p>
+                </div>
 
                 <!-- Quick Link -->
-                <div class="col">
-                    <h4 class="text-white mb-4">Quick Link</h4>
-                    <div class="d-flex flex-column gap-2">
-                        <a class="btn btn-link text-start px-0 text-light" href="">Home</a>
-                        <a class="btn btn-link text-start px-0 text-light" href="">Berita</a>
-                        <a class="btn btn-link text-start px-0 text-light" href="">Struktur</a>
-                        <a class="btn btn-link text-start px-0 text-light" href="">Kalender</a>
-                    </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="text-white mb-3">Quick Link</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none small">Home</a></li>
+                        <li><a href="#" class="text-light text-decoration-none small">Berita</a></li>
+                        <li><a href="#" class="text-light text-decoration-none small">Struktur</a></li>
+                        <li><a href="#" class="text-light text-decoration-none small">Kalender</a></li>
+                    </ul>
                 </div>
+            </div>
 
-                <!-- Find Us -->
-                <div class="col text-center">
-                    <h4 class="text-white mb-4">Find Us</h4>
-                    <p class="mb-2 small">
-                        <i class="fa fa-map-marker-alt me-2"></i>
-                        48MP+V8M, Gg. Teratai, Cepit, Pendowoharjo, Kec. Sewon, Kabupaten Bantul, Yogyakarta
-                    </p>
-                    <p class="mb-2 small">
-                        <i class="fa fa-phone-alt me-2"></i> +62 812-1564-9033
-                    </p>
-                    <div class="d-flex justify-content-center gap-2 pt-2">
-                        <a class="btn btn-outline-light btn-sm rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-sm rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-sm rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-sm rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-
-                <!-- Gallery -->
-                <div class="col text-end">
-                    <h4 class="text-white mb-4">Gallery</h4>
-                    <div class="row g-2">
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1 rounded" src="img/course-1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-
+            <!-- Footer Bawah -->
+            <hr class="border-light mt-5">
+            <div class="text-center small text-muted">
+                &copy; 2025 <strong>PAUD TPA Athahira</strong>. All Rights Reserved. | Designed with ❤️ by Tim Kreatif
             </div>
         </div>
-    </div>
+    </footer>
     <!-- Footer End -->
 
     <!-- Back to Top -->

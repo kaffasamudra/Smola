@@ -44,3 +44,4 @@ $route['ortu_berita'] = 'ortu/beritaortu/index';
 $route['ortu_buku'] = 'ortu/bukuortu/index';
 $route['ortu_buku_detail'] = 'ortu/bukuortu/detail';
 $route['ortu_struktur_paud'] = 'ortu/struktur/index';
+$route['ortu_kalender_akademik'] = 'ortu/kalender/index';
