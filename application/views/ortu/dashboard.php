@@ -191,7 +191,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url("assets/users/") ?>img/logo paud athahira.png" alt="">
+                            <img class="img-fluid" src="<?= base_url("assets/users/") ?>img/kelas-kb.jpg" alt="">
                         </div>
                         <div class="text-center p-4 pb-0">
                             <h3 class="mb-0">Kelas KB</h3>
@@ -214,7 +214,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('./assets/users/') ?>img/logo paud athahira.png" alt="">
+                            <img class="img-fluid object-fit-contain" src="<?= base_url('./assets/users/') ?>img/kelas-baby.jpg" alt="">
                         </div>
                         <div class="text-center p-4 pb-0">
                             <h3 class="mb-0">Kelas Baby</h3>
