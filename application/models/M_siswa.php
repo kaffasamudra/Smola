@@ -8,7 +8,7 @@ class M_siswa extends CI_Model {
         $this->db->select('siswa.*, kelas.*, orang_tua.*');
         $this->db->from('siswa');
         $this->db->join('kelas', 'kelas.id = siswa.kelas_id', 'left');
-        $this->db->join('orang_tua', 'orang_tua.id = siswa.orang_tua_id', 'left');
+        $this->db->join('orang_tua', 'orang_tua.id = siswa.nama_orangtua', 'left');
         return $this->db->get()->result();
     }
 
