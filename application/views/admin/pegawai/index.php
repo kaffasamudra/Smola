@@ -19,6 +19,7 @@
                                 <table class="table align-items-center justify-content-center mb-0">
                                     <thead>
                                         <tr>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Foto</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Alamat</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Jabatan</th>
@@ -39,9 +40,11 @@
                                                         <div>
                                                             <img src="<?= base_url('assets/admin/img/' . $p->foto) ?>" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
                                                         </div>
-                                                        <div class="my-auto">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="my-auto">
                                                             <h6 class="mb-0 text-sm"><?= $p->nama ?></h6>
-                                                        </div>
                                                     </div>
                                                 </td>
                                                 <td>
@@ -70,13 +73,14 @@
                                                             data-foto="<?= $p->foto ?>"
                                                             data-user_id="<?= $p->user_id ?>"
                                                             class="edit-btn text-info pe-3 border-end btn-no-outline" data-bs-toggle="modal" data-bs-target="#modalEdit"><i class="material-symbols-rounded">edit</i></button>
-                                                        <a href="#"
-                                                            id="delete-id"
-                                                            class="delete-btn text-danger"
-                                                            data-id="<?= $p->id ?>"
-                                                            data-nama="<?= $p->nama ?>">
+                                                        <a href="#" class="delete-btn text-danger" 
+                                                           data-id="<?= $p->id ?>" 
+                                                           data-nama="<?= $p->nama ?>">
                                                             <i class="material-symbols-rounded">delete</i>
                                                         </a>
+                                                        <form id="deleteForm" action="<?= site_url('admin/pegawai/delete') ?>" method="post" style="display: none;">
+                                                            <input type="hidden" name="delete-id" id="delete-id">
+                                                        </form>
                                                     </div>
                                                 </td>
                                             </tr>
