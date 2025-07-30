@@ -469,21 +469,23 @@
 
     <script>
         $(document).ready(function() {
+            // Edit tombol
             $('.edit-btn').on('click', function() {
                 $('#edit-id').val($(this).data('id'));
                 $('#edit-nip').val($(this).data('nip'));
                 $('#edit-nama').val($(this).data('nama'));
                 $('#edit-alamat').val($(this).data('alamat'));
                 $('#edit-telp').val($(this).data('telp'));
-                $('#edit-telp').val($(this).data('telp'));
                 $('#edit-jabatan').val($(this).data('jabatan'));
                 $('#edit-foto').val($(this).data('foto'));
                 $('#edit-user_id').val($(this).data('user_id'));
             });
 
+            // Delete tombol
             $('.delete-btn').on('click', function(e) {
                 e.preventDefault();
-                const id = $('#delete-id').val($(this).data('id'));
+
+                const id = $(this).data('id');
                 const nama = $(this).data('nama');
 
                 Swal.fire({
@@ -496,10 +498,9 @@
                     confirmButtonText: 'Ya, Hapus!'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        const form = $('#deleteForm');
-                        form.attr('action', '<?= site_url('admin_pegawai_index_delete') ?>');
+                        // Kirim data ke backend dengan cara submit form tersembunyi
                         $('#delete-id').val(id);
-                        form.submit();
+                        $('#deleteForm').submit();
                     }
                 });
             });
