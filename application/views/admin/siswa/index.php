@@ -68,7 +68,7 @@
                                                             data-nama="<?= $s->nama ?>"
                                                             data-alamat="<?= $s->alamat ?>"
                                                             data-kelas_id="<?= $s->kelas_id ?>"
-                                                            data-orang_tua_id="<?= $s->orang_tua_id ?>"
+                                                            
                                                             data-foto="<?= $s->foto ?>"
                                                             data-tanggal_lahir="<?= $s->tanggal_lahir ?>"
                                                             class="edit-btn text-info pe-3 border-end btn-no-outline" data-bs-toggle="modal" data-bs-target="#modalEdit"><i class="material-symbols-rounded">edit</i></button>
