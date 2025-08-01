@@ -205,9 +205,9 @@
                             <h5 class="mb-4">Program Kelompok Bermain untuk Belajar dan Berkembang</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie custom me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock custom me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user custom me-2"></i>30 Students</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie custom me-2"></i>Tim Pengajar</small>
+                            <!-- <small class="flex-fill text-center border-end py-2"></i>Athahira</small> -->
+                            <small class="flex-fill text-center py-2"><i class="fa fa-puzzle-piece custom me-2"></i>Belajar sambil bermain</small>
                         </div>
                     </div>
                 </div>
@@ -228,9 +228,9 @@
                             <h5 class="mb-4">Program untuk Stimulasi Dini dan Ikatan Orang Tua-Anak</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie custom me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock custom me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user custom me-2"></i>30 Students</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie custom me-2"></i>Tim Pengasuh</small>
+                            <!-- <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock custom me-2"></i>1.49 Hrs</small> -->
+                            <small class="flex-fill text-center py-2"><i class="fa fa-seedling custom me-2"></i>Stimulasi tumbuh kembang</small>
                         </div>
                     </div>
                 </div>

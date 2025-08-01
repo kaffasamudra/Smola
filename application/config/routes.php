@@ -41,6 +41,7 @@ $route['admin_berita_detail'] = 'admin/berita/detail';
 
 $route['ortu_dashboard'] = 'ortu/dashboard/index';
 $route['ortu_berita'] = 'ortu/beritaortu/index';
+$route['ortu_berita_detail'] = 'ortu/beritaortu/detail';
 $route['ortu_buku'] = 'ortu/bukuortu/index';
 $route['ortu_buku_detail'] = 'ortu/bukuortu/detail';
 $route['ortu_struktur_paud'] = 'ortu/struktur/index';
