@@ -11,12 +11,12 @@
                             <form role="form" class="text-start" action="<?php echo site_url('admin_pegawai_index_input') ?>" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                 <div class="input-group input-group-outline my-3">
-                                    <label class="form-label">NIP</label>
-                                    <input name="nip" type="number" class="form-control">
-                                </div>
-                                <div class="input-group input-group-outline my-3">
                                     <label class="form-label">Nama</label>
                                     <input name="nama" type="text" class="form-control">
+                                </div>
+                                <div class="input-group input-group-outline my-3">
+                                    <label class="form-label">NIS</label>
+                                    <input name="nis" type="number" class="form-control">
                                 </div>
                                 <div class="input-group input-group-outline my-3">
                                     <label class="form-label">Alamat</label>
@@ -26,7 +26,7 @@
                                     <label class="form-label">No Handphone</label>
                                     <input name="telp" type="number" class="form-control">
                                 </div>
-                                <div class="input-group input-group-outline my-3 position-relative">
+                                <!-- <div class="input-group input-group-outline my-3 position-relative">
                                     <select name="jabatan" class="form-control pe-5">
                                         <option selected hidden>Jabatan</option>
                                         <option value="direktur">Direktur</option>
@@ -35,7 +35,7 @@
                                     <span class="material-symbols-rounded position-absolute end-0 top-50 translate-middle-y me-3 text-secondary pointer-events-none transition-arrow">
                                         keyboard_arrow_down
                                     </span>
-                                </div>
+                                </div> -->
                                 <div class="input-group input-group-outline my-3 position-relative">
                                     <select name="user_id" class="form-control pe-5">
                                         <option selected hidden>Email</option>
