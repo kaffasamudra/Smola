@@ -29,6 +29,7 @@ class Siswa extends CI_Controller
 	    $data['title'] = 'Data Siswa';
 	    // $data['kelas'] = $this->db->get('kelas')->result();
 	    $data['kelas'] = $this->M_kelas->get_all();
+	    log_message('error', 'data tes: '. json_encode($data['kelas']));
 
 	    // Validasi form
 	    $this->form_validation->set_rules('nama', 'Nama', 'required');

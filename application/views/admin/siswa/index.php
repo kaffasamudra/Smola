@@ -19,6 +19,7 @@
                                 <table class="table align-items-center justify-content-center mb-0">
                                     <thead>
                                         <tr>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Foto</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama Siswa</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NIS</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Kelas</th>
@@ -40,9 +41,11 @@
                                                         <div>
                                                             <img src="<?= filter_var($s->foto, FILTER_VALIDATE_URL) ? $s->foto : base_url('assets/images/siswa/' . $s->foto) ?>" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
                                                         </div>
-                                                        <div class="my-auto">
-                                                            <h6 class="mb-0 text-sm"><?= $s->nama ?></h6>
-                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="my-auto">
+                                                        <h6 class="mb-0 text-sm"><?= $s->nama ?></h6>
                                                     </div>
                                                 </td>
                                                 <td>
@@ -52,7 +55,7 @@
                                                     <span class="text-xs font-weight-bold"><?= $s->nama_kelas ?></span>
                                                 </td>
                                                 <td class="align-middle text-center">
-                                                    <span class="me-2 text-xs font-weight-bold"><?= $s->nama ?></span>
+                                                    <span class="me-2 text-xs font-weight-bold"><?= $s->nama_orangtua ?></span>
                                                 </td>
                                                 <td>
                                                     <p class="text-sm font-weight-bold mb-0 text-capitalize"><?= $s->alamat ?></p>
