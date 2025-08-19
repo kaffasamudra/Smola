@@ -38,8 +38,8 @@
                                     <input class="form-control" type="text" id="alamat" name="alamat">
                                 </div>
                                 <div class="input-group input-group-outline my-3">
-                                    <label class="form-label" for="tgl_lahir"></label>
-                                    <input class="form-control" type="date" id="tgl_lahir" name="tgl_lahir" placeholder="">
+                                    <label class="form-label" for="tanggal_lahir"></label>
+                                    <input class="form-control" type="date" id="tanggal_lahir" name="tanggal_lahir" placeholder="">
                                 </div>
                                 <div class="input-group input-group-outline mb-3">
                                     <span class="bg-gradient-dark text-white text-center p-2 rounded me-2">Foto</span>

@@ -8,69 +8,73 @@ class Siswa extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('M_siswa');
+		$this->load->library('upload');
+		// $this->load->model('M_kelas');
 	}
 
 	public function index()
-	{
-		$data['siswa'] = $this->M_siswa->get_all();
-		$data['title'] = 'Data Siswa';
-		$data['content'] =  $this->load->view('admin/siswa/index', $data, true);
-		$this->load->view('admin/layout/master', $data);
-	}
+    {
+        $data['title']  = 'Data Siswa';
+        $data['siswa']  = $this->M_siswa->get_all();  // ambil data siswa + join kelas
+        $data['kelas']  = $this->db->get('kelas')->result(); // ambil data kelas
+        $data['content'] = $this->load->view('admin/siswa/index', $data, true);
 
+        $this->load->view('admin/layout/master', $data);
+    }
 	public function detail()
 	{
 		$data['title'] = 'Detail Siswa';
+		$data['siswa'] = $this->M_siswa->get_by_id($id);
 		$data['content'] =  $this->load->view('admin/siswa/detail', $data, true);
 		$this->load->view('admin/layout/master', $data);
 	}
 	public function input()
-	{
-	    $data['title'] = 'Data Siswa';
-	    // $data['kelas'] = $this->db->get('kelas')->result();
-	    $data['kelas'] = $this->M_kelas->get_all();
-	    log_message('error', 'data tes: '. json_encode($data['kelas']));
+    {
+        $data['title'] = 'Tambah Data Siswa';
+        $data['kelas']  = $this->db->get('kelas')->result();
+        $data['siswa']  = $this->M_siswa->get_all();
 
-	    // Validasi form
-	    $this->form_validation->set_rules('nama', 'Nama', 'required');
-	    $this->form_validation->set_rules('nis', 'NIS', 'required');
-	    $this->form_validation->set_rules('kelas_id', 'Kelas', 'required');
-	    $this->form_validation->set_rules('nama_orangtua', 'Nama Orang Tua', 'required');
-	    $this->form_validation->set_rules('alamat', 'Alamat', 'required');
-	    $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'required');
+        // Aturan validasi
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
+        $this->form_validation->set_rules('nis', 'NIS', 'required');
+        $this->form_validation->set_rules('kelas_id', 'Kelas', 'required');
+        $this->form_validation->set_rules('nama_orangtua', 'Nama Orang Tua', 'required');
+        $this->form_validation->set_rules('alamat', 'Alamat', 'required');
+        $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'required');
 
-	    if ($this->form_validation->run() == FALSE) {
-	        $data['content'] = $this->load->view('admin/siswa/form_input', $data, true);
-	        $this->load->view('admin/layout/master', $data);
-	    } else {
-	        // Upload foto
-	        $config['upload_path']   = './assets/foto_siswa';
-	        $config['allowed_types'] = 'jpg|jpeg|png';
-	        $config['max_size']      = 2048;
-	        $config['encrypt_name']  = TRUE;
-	        $this->load->library('upload', $config);
+        if ($this->form_validation->run() == FALSE) {
+            // Kalau validasi gagal
+            $data['content'] = $this->load->view('admin/siswa/index', $data, true);
+            $this->load->view('admin/layout/master', $data);
+        } else {
+            // Konfigurasi upload foto
+            $config['upload_path']   = './assets/admin/img/foto_siswa'; // pastikan folder ini sudah ada
+            $config['allowed_types'] = 'jpg|jpeg|png';
+            $config['max_size']      = 2048; // 2MB
+            $this->upload->initialize($config);
 
-	        $foto = '';
-	        if ($this->upload->do_upload('foto')) {
+            $foto = '';
+            if ($this->upload->do_upload('foto')) {
 	            $upload_data = $this->upload->data();
 	            $foto = $upload_data['file_name'];
 	        }
+            // Data yang mau disimpan
+            $siswaData = [
+                'nama'          => $this->input->post('nama'),
+                'nis'           => $this->input->post('nis'),
+                'kelas_id'      => $this->input->post('kelas_id'),
+                'nama_orangtua' => $this->input->post('nama_orangtua'),
+                'alamat'        => $this->input->post('alamat'),
+                'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+                'foto'          => $foto
+            ];
 
-	        // Ambil data form
-	        $datas = [
-	            'nama'    => $this->input->post('nama'),
-	            'nis'           => $this->input->post('nis'),
-	            'kelas_id'      => $this->input->post('kelas_id'),
-	            'nama_orangtua' => $this->input->post('nama_orangtua'),
-	            'alamat'        => $this->input->post('alamat'),
-	            'tanggal_lahir'     => $this->input->post('tgl_lahir'),
-	            'foto'          => $foto
-	        ];
+            $this->M_siswa->insert($siswaData);
 
-	        $this->M_siswa->insert($datas);
-	        redirect('siswa');
-	    }
-	}
+            $this->session->set_flashdata('success', 'Data siswa berhasil ditambahkan!');
+            redirect('admin_siswa_index');
+        }
+    }
 	public function edit()
 		{
 				$data['title'] = 'Kepegawaian - Data Pegawai';
@@ -94,12 +98,12 @@ class Siswa extends CI_Controller
 				} else {
 						// Ambil semua data inputan
 						$datas = [
-								'nip' => $this->input->post('nip'),
-								'nama' => $this->input->post('nama'),
-								'alamat' => $this->input->post('alamat'),
-								'telp' => $this->input->post('telp'),
-								'jabatan' => $this->input->post('jabatan'),
-								'user_id' => $this->input->post('user_id'),
+								'nip' 		=> $this->input->post('nip'),
+								'nama' 		=> $this->input->post('nama'),
+								'alamat' 	=> $this->input->post('alamat'),
+								'telp' 		=> $this->input->post('telp'),
+								'jabatan'	=> $this->input->post('jabatan'),
+								'user_id'	=> $this->input->post('user_id'),
 						];
 
 						// Konfigurasi upload file

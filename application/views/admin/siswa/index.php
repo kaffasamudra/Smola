@@ -39,7 +39,7 @@
                                                 <td>
                                                     <div class="d-flex px-2">
                                                         <div>
-                                                            <img src="<?= filter_var($s->foto, FILTER_VALIDATE_URL) ? $s->foto : base_url('assets/images/siswa/' . $s->foto) ?>" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
+                                                            <img src="<?= base_url('assets/admin/img/foto_siswa' . $s->foto) ?>" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
                                                         </div>
                                                     </div>
                                                 </td>
