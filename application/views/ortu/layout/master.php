@@ -21,7 +21,9 @@
     <link href="<?= base_url("assets/users/") ?>css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
+    <link href="<?= base_url("assets/users/") ?>css/animate.min.css" rel="stylesheet">
     <link href="<?= base_url("assets/users/") ?>css/style.css" rel="stylesheet">
+    <!-- <link href="<?= base_url("assets/users/") ?>css/blog.css" rel="stylesheet"> -->
     <style>
         .hover-scale {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -52,6 +54,14 @@
             border-color: #00BFFF;
             color: white;
         }
+
+        .card-hover:hover {
+            transform: scale(1.02);
+            transition: transform 0.2s;
+        }
+        .text-justify {
+            text-align: justify;
+        }
     </style>
 </head>
 
@@ -65,10 +75,10 @@
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 flex-nowrap">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="<?= base_url('ortu_dashboard') ?>" class="navbar-brand d-flex align-items-center px-2 px-lg-5">
-            <img src="<?= base_url("assets/users/") ?>img/logo paud athahira.png" class="me-3" style="height: 40px;" alt="Logo">
-            <h2 class="m-0 custom">
+            <img src="<?= base_url("assets/users/") ?>img/logo paud athahira.png" class="me-3 h-75" style="" alt="Logo">
+            <h2 class="m-0 custom d-none d-md-block">
                 PAUD TPA Athahira
             </h2>
         </a>
@@ -83,7 +93,7 @@
                 <a href="<?= site_url('ortu_struktur_paud') ?>" class="nav-item nav-link <?= menu_show(['ortu_struktur_paud']) ? 'active' : '' ?>">Struktur</a>
                 <a href="<?= site_url('ortu_kalender_akademik') ?>" class="nav-item nav-link <?= menu_show(['ortu_kalender_akademik']) ? 'active' : '' ?>">Kalender</a>
             </div>
-            <a href="" class="btn btn-primary custom-btn custom-btn py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="<?= base_url('regis') ?>" class="btn btn-primary custom-btn custom-btn py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->

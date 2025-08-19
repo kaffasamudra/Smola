@@ -3,60 +3,55 @@
             <!-- Blog entries-->
             <div class="col-lg-8">
                 <!-- Featured blog post-->
-                <div class="card mb-4">
-                    <a href="#!"><img class="card-img-top" src="<?= base_url('./assets/users/img/foto paud 2.png') ?>" alt="..." /></a>
+                <a href="<?= base_url('ortu_berita_detail') ?>" class="card-hover card mb-4">
+                    <img class="card-img-top" src="<?= base_url('./assets/users/img/foto paud 2.png') ?>" alt="..." />
                     <div class="card-body">
                         <div class="small text-muted">January 1, 2023</div>
-                        <h2 class="card-title">Featured Post Title</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                        <a class="btn btn-primary custom-btn custom-btn" href="#!">Read more →</a>
+                        <h2 class="card-title"><?= character_limiter('Featured Post Title', 30) ?></h2>
+                        <p class="card-text text-secondary"><?= character_limiter('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!', 100) ?></p>
                     </div>
-                </div>
+                </a>
                 <!-- Nested row for non-featured blog posts-->
                 <div class="row">
                     <div class="col-lg-6">
                         <!-- Blog post-->
-                        <div class="card mb-4">
-                            <a href="#!"><img class="card-img-top" src="<?= base_url('./assets/users/img/foto paud 2.png') ?>" alt="..." /></a>
+                        <a href="#" class="card-hover card mb-4">
+                            <img class="card-img-top" src="<?= base_url('./assets/users/img/foto paud 2.png') ?>" alt="..." />
                             <div class="card-body">
                                 <div class="small text-muted">January 1, 2023</div>
-                                <h2 class="card-title h4">Post Title</h2>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                <a class="btn btn-primary custom-btn" href="#!">Read more →</a>
+                                <h2 class="card-title h4"><?= character_limiter('Post Title', 30) ?></h2>
+                                <p class="card-text text-secondary"><?= character_limiter('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.', 100) ?></p>
                             </div>
-                        </div>
+                        </a>
                         <!-- Blog post-->
-                        <div class="card mb-4">
-                            <a href="#!"><img class="card-img-top" src="<?= base_url('./assets/users/img/foto paud 2.png') ?>" alt="..." /></a>
+                        <a href="#" class="card-hover card mb-4">
+                            <img class="card-img-top" src="<?= base_url('./assets/users/img/foto paud 2.png') ?>" alt="..." />
                             <div class="card-body">
                                 <div class="small text-muted">January 1, 2023</div>
-                                <h2 class="card-title h4">Post Title</h2>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                <a class="btn btn-primary custom-btn" href="#!">Read more →</a>
+                                <h2 class="card-title h4"><?= character_limiter('Post Title', 30) ?></h2>
+                                <p class="card-text text-secondary"><?= character_limiter('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.', 100) ?></p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-6">
                         <!-- Blog post-->
-                        <div class="card mb-4">
-                            <a href="#!"><img class="card-img-top" src="<?= base_url('./assets/users/img/foto paud 2.png') ?>" alt="..." /></a>
+                        <a href="#" class="card-hover card mb-4">
+                            <img class="card-img-top" src="<?= base_url('./assets/users/img/foto paud 2.png') ?>" alt="..." />
                             <div class="card-body">
                                 <div class="small text-muted">January 1, 2023</div>
-                                <h2 class="card-title h4">Post Title</h2>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                <a class="btn btn-primary custom-btn" href="#!">Read more →</a>
+                                <h2 class="card-title h4"><?= character_limiter('Post Title', 30) ?></h2>
+                                <p class="card-text text-secondary"><?= character_limiter('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.', 100) ?></p>
                             </div>
-                        </div>
+                        </a>
                         <!-- Blog post-->
-                        <div class="card mb-4">
-                            <a href="#!"><img class="card-img-top" src="<?= base_url('./assets/users/img/foto paud 2.png') ?>" alt="..." /></a>
+                        <a href="#" class="card-hover card mb-4">
+                            <img class="card-img-top" src="<?= base_url('./assets/users/img/foto paud 2.png') ?>" alt="..." />
                             <div class="card-body">
                                 <div class="small text-muted">January 1, 2023</div>
-                                <h2 class="card-title h4">Post Title</h2>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
-                                <a class="btn btn-primary custom-btn" href="#!">Read more →</a>
+                                <h2 class="card-title h4"><?= character_limiter('Post Title', 30) ?></h2>
+                                <p class="card-text text-secondary"><?= character_limiter('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.', 100) ?></p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Pagination-->
@@ -108,14 +103,13 @@
                     </div>
                 </div> -->
                 <!-- Side widget-->
-                <div class="card mb-4">
+                <a href="#" class="card mb-4 card-hover">
                     <div class="card-body">
                         <div class="small text-muted">January 1, 2023</div>
-                        <h2 class="card-title h4">Post Title</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
-                        <a class="btn btn-primary custom-btn" href="#!">Read more →</a>
+                        <h2 class="card-title h4"><?= character_limiter('Post Title', 30) ?></h2>
+                        <p class="card-text text-dark"><?= character_limiter('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.', 100) ?></p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
